@@ -1,11 +1,11 @@
 //This is demo for buildin locators of Palywright
 import{test,expect,Locator} from '@playwright/test';
 
-test("Playwright locators",async({page})=>{
+test("Playwright locators demo",async({page})=>{
 await page.goto("https://demo.nopcommerce.com/");
 //use ALtText()- locator to capture logo/images.
 
-const logo :Locator=  page.getByAltText("nopCommerce demo store");
+const logo :Locator =  page.getByAltText("nopCommerce demo store");
  
 await expect(logo).toBeVisible;
 
@@ -34,4 +34,6 @@ await page.getByPlaceholder("Search store").fill('Apple Mac book');
 await page.getByRole("button",{name:'Register'}).click();
 await expect(page.getByText('Password is required.')).toBeVisible();
 
+//getByTestId()--Locate an element based on its data - testid atribute (othe attributes can be config)
+//When to use: when tect or role based locators are unstabe or not suitable. 
 })
