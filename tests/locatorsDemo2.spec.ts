@@ -1,4 +1,4 @@
-import { expect , test, Locator} from "@playwright/test"
+import { expect , test, Locator} from "@playwright/test";
 
 
 
