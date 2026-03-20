@@ -3,7 +3,8 @@ import{test,expect,Locator} from '@playwright/test';
 
 test("Playwright locators demo",async({page})=>{
 await page.goto("https://demo.nopcommerce.com/");
-
+//Types of locators in Playwright 
+//getByRole, getByText,getByAltText,getByLable,getByPlaceHolder,getByTitle,getByTestId.
 //use ALtText()- locator to capture logo/images.
 
 const logo :Locator =  page.getByAltText("nopCommerce demo store");
