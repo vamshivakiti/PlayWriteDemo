@@ -1,5 +1,5 @@
 import* as test from"@playwright/test"
-test.test("actions demo class",async({page})=>   {
+test.test("actions demo", async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/");
     
     const textBox:test.Locator=page.locator('#name');
